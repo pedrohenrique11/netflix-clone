@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/style.css">
 
-    <!-- owl css-->
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- owl css -->
     <link rel="stylesheet" href="/src/css/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="/src/css/owl/owl.theme.default.min.css">
     
@@ -46,7 +49,7 @@
 
     <main>
         <section class="home">
-            <div class="home__content">
+            <div data-aos="fade-right" class="home__content">
                 <div class="home__copy">
                     <h2 class="home__title">DUNA</h2>
                     <h3 class="home__description">Assista agora ao inicio da saga Duna</h3>
@@ -59,26 +62,155 @@
             </div>
         </section>
         <section class="catalogo">
-            <div class="popular__movies lista">
+            <div class="sugestoes lista">
+                <h2 class="lista__title">Sugestões Para Você</h2>
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster6.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster5.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster3.jpg" alt="">
+                    </div>
+                    <div class="item">
+                          <img class="poster" src="/src/images/filmes/poster1.jpg" alt="">                   
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster4.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster2.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster6.jpg" alt="">
+                    </div>
+                    </div>                    
+                </div>
 
+            <div class="popular__movies lista">
+                <h2 class="lista__title">Filmes Populares</h2>
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster6.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster5.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster3.jpg" alt="">
+                    </div>
+                    <div class="item">
+                          <img class="poster" src="/src/images/filmes/poster1.jpg" alt="">                   
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster4.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster2.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster6.jpg" alt="">
+                    </div>
+                    
+            </div>
             </div>
 
             <div class="popular__series lista">
-
+                <h2 class="lista__title">Séries para Maratonar</h2>
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster6.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster5.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster3.jpg" alt="">
+                    </div>
+                    <div class="item">
+                          <img class="poster" src="/src/images/filmes/poster1.jpg" alt="">                   
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster4.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster2.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster6.jpg" alt="">
+                    </div>
+                    
+            </div>
             </div>
 
             <div class="popular__animes lista">
-
+                <h2 class="lista__title">O melhor dos Animes</h2>
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster6.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster5.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster3.jpg" alt="">
+                    </div>
+                    <div class="item">
+                          <img class="poster" src="/src/images/filmes/poster1.jpg" alt="">                   
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster4.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster2.jpg" alt="">
+                    </div>
+                    <div class="item">
+                            <img class="poster" src="/src/images/filmes/poster6.jpg" alt="">
+                    </div>
+                    
+            </div>
             </div>
 
-            <div class="popular__movies lista">
-
-            </div>
         </section>
     </main>
     <script src="/src/js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- owl carousel-->
     <script src="/src/js/owl/jquery.min.js"></script>
     <script src="/src/js/owl/owl.carousel.min.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        borderRadius: 10,
+        margin:10,
+        nav: false,
+        responsive:{
+            0:{
+                items:4
+            },
+            600:{
+                items:5
+            },
+            1000:{
+                items:7
+            },
+            1600: {
+                items:10
+            }
+        }
+    })
+});
 
+AOS.init();
+    </script>
 </body>
+<footer>
+    <p> @</p>
+</footer>
 </html>
